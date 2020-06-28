@@ -1,0 +1,230 @@
+/* Gestion du logo en dessous de 1480px */
+@media screen and (max-width: 1480px){
+    header img{
+        display:none;
+    }
+    header.sticky img{
+        display: initial;
+    }
+}
+/* Gestion sticky menu & images en dessous de 1100px */
+@media screen and (max-width:1100px){
+
+    #wrapper {
+        padding: 0 2em 1em 2em;
+    }
+    /* Virer les :hover */
+
+    nav a:hover{
+        border-bottom: 0px;
+     }
+    p>a:hover{
+        color:initial;
+    }
+    .socials:hover{
+        transform: none;
+    }
+
+
+    figure {
+        text-align:center;
+    }
+
+    #vers2{
+        height: 400px;
+    }
+
+    #vers1 {
+        height: 300px;
+    }
+    #vador {
+        height:300px;
+    }
+
+
+    #agile{
+        text-align: center;
+    }
+
+    /* Gestion du NAV */
+    .nav{
+        display:none;
+
+    }
+    nav{transition: margin-right ease 1.5s;}
+
+    header.sticky img{
+        width: 5em;
+        top:0.5em;
+    }
+    .sticky>div>section>h1{
+        margin: 1em auto;
+    }
+    header img{
+        display: block;
+        width: 5em;
+        top:0.5em;
+    }
+    header>div>section>h1{
+        font-size: 1.5em;
+        margin: 1em auto;
+    }
+    #wrapper {
+        margin-top:5em;
+    }
+
+
+    /*.burgerAnimate{
+        animation-name: burgerAnimate;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+    }
+    @keyframes burgerAnimate {
+        0% {
+
+            margin-right: -150px;
+        }
+        100% {
+
+            margin-right: 1em;
+        }
+    }
+    */
+
+    #burgerNav {
+        border: 2px solid var(--main-color-lighter);
+        border-radius: 5px;
+        color: var(--main-color-lighter);
+        padding: 0.25em;
+        display: initial;
+        position: absolute;
+        right: 0.5em;
+        top: 0.4em;
+        cursor: pointer;
+    }
+
+    .burgerMenu{
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        top: 110px;
+        right: 1em;
+        background-color: var(--main-color);
+        width: 162px;
+        max-height: 9rem;
+        font-size: 0.5em;
+        border-radius:1em;
+        margin-right: -190px;
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    }
+    .sticky nav a{
+        font-size: 1.5em;
+    }
+
+    .active{
+        border-left: 2px solid var(--main-color-title);
+        border-bottom:none;
+    }
+
+    .projets-img{
+        max-width: 300px;
+    }
+
+    .projets-flex article:last-child, .projets-flex article:first-child{
+        border: none;
+    }
+    #propos{
+        padding-top: 6em;
+    }
+
+}
+
+
+
+/* Gestion sticky menu & images en dessous de 640px */
+@media screen and (max-width:640px){
+
+    #wrapper {
+        padding:0 2em 1em 2em;
+    }
+    header img, header.sticky img{
+        display:none;
+    }
+    header{
+        height: 100px;
+    }
+    #burgerNav{
+    border: 2px solid var(--main-color-lighter);
+    color: var(--main-color-lighter);
+    border-radius: 5px;
+    margin-left: 1em;
+    padding: 0.1em;
+    display: initial;
+    position: absolute;
+    right: 0.5em;
+    top: 1.6em;
+    }
+
+
+    /* img */
+    figure{
+        margin:0;
+    }
+
+
+    hr.style-two{
+        width: 250px;
+    }
+    /* Logo Contact */
+    #contact div.center{
+        display:block;
+    }
+    #contact div.center a {
+        justify-content:center;
+    }
+
+
+    /* ancre */
+
+    .ancre{
+        bottom: 1em;
+    }
+    .ancre a{
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+    footer{
+        padding-bottom: 3em;
+    }
+    /* Formulaire */
+    .form p input {
+        width: 15em;
+    }
+    .form div p :last-child{
+        margin-left: 0;
+        margin-top:1em;
+    }
+    #coche{
+        width: 2em;
+    }
+    textarea{
+        width:15em;
+    }
+    input#sujet{
+        width: 15em;
+    }
+
+
+    /* Weather */
+
+    .bloc{
+        width: 300px;
+    }
+    #select-city{
+        margin:0;
+        width:100%;
+    }
+
+}
+
