@@ -39,9 +39,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/64cfa211f1.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="assets/apiweather/css/weathericons.css" />
-    <link rel="stylesheet" href="assets/apiweather/css/weather_index.css" />
-    <script src="./assets/apiweather/js/index.js"></script>
 
 <link rel="stylesheet" href="assets/css/timeline.css">
     <link rel="stylesheet" href="assets/css/style.css">
