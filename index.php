@@ -54,6 +54,13 @@
   gtag('config', 'UA-146719243-1');
 </script>
 
+<!-- Captcha v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6Lds9qUZAAAAAHsrVexr99a8fy8CvABDBboJDPOI"></script>
+
+
+
+
+
 </head>
 <body>
 
@@ -364,7 +371,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 
-
+    <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6Lds9qUZAAAAAHsrVexr99a8fy8CvABDBboJDPOI', {action: 'submit'}).then(function(token) {
+              console.log(token)
+          });
+        });
+      }
+  </script>
 
 
     </body>
