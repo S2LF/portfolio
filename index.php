@@ -218,7 +218,7 @@
                         <h3>Autoformation en développement web</h3>
                         <span><a href="https://openclassrooms.com/fr/" class="link" target="blank">OpenClassrooms</a> | Janvier 2019 à Aujourd'hui</span>
                         <div>
-                        <a href="https://openclassrooms.com/fr/" target="blank"><img class="img-float-left" src="./assets/img/logoOC.png" alt="logo OpenClassrooms"></a>
+                        <a href="https://openclassrooms.com/fr/" target="blank"><img class="img-float-left" src="./assets/img/LogoOC.png" alt="logo OpenClassrooms"></a>
                             <p>Plateforme de formation en ligne connue et reconnus, ma  <strong>réorientation endéveloppement web</strong> a commencé avec OpenClassrooms.<br><br>
                             Aujourd'hui titulaire de 10 certificats en développement web, je compte bien continuer à me former sur cette plateforme en ligne et sur d'autres...</p>
                         </div>
