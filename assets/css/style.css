@@ -144,6 +144,7 @@ h3{
     .portfolio img.monsite{
         border: 1px solid black;
     }
+    
     .projets-flex{
         display: flex;
         flex-direction: row;
@@ -365,4 +366,5 @@ ul.goutteCouleur >li>i{
 }
 .display{
     display: none;
-};
+}
+

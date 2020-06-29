@@ -142,6 +142,7 @@
                             <div>
                                 <p>Mon portfolio est le site sur lequel vous êtes actuellement:
                                     <ul>
+                                        <li>Version 5, design et contenu évoluant régulièrement</li>
                                         <li>Projet réalisé afin de présenter mon expériences, mes compétences</li>
                                         <li>Entièrement réalisé par mes soins, sans librairies ou framework.</li>
                                         <li>Site web responsive</li>
@@ -150,13 +151,12 @@
                             </div>
 
                             <div class="projets-logo">
-                                <img class="logoResize" src="assets/img/Front.png" alt="logo langages front"><br>
-                                <img class="logoResize" src="assets/img/Back.png" alt="logo langages back"><br>
+                                <img class="logoResize" src="assets/img/Tech.png" alt="logo langages">
                             </div>
                         </div>
 
-                    </article>
-                    <hr class="style-two" id="form">
+                </article>
+                <hr class="style-two" id="form">
 
                 <div class="projets-flex">
                     <article>
@@ -167,7 +167,7 @@
                             </a>
                             <div class="center">
                                 <a href="https://tofbox.sylvainallain.fr/" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
-                                <a href="https://github.com/S2LF/TofBoxProject" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                                <a href="https://github.com/S2LF/portfolio" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                             </div>
                         </div>
                         <p>Réseau social de partage de photographies:
@@ -358,8 +358,9 @@
     <footer>
             <img src="./assets/img/LogoASPixel4.png" alt="Mon logo">
             <p>Merci de votre visite</p>
-            <p>/!\ Ce site est en cours de construction, il sera amené à évoluer régulièrement /!\</p>
+            <p>Mon Portfolio - Version 5.1.0</p>
             <p>Made with <i class="fa fa-heart "></i> by Syl20 - Tous droits réservés - 2020</p>
+            <p><a href="./mentions.html">Mentions légales</a></p>
 
     </footer>
 
