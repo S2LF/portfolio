@@ -272,7 +272,7 @@ if(isset($_POST['post'])){
                         <h3 class="center not-blue">Memory & jeu du Pendu</h3>
                         <div class="center">
                             <a href="https://syl20-projects.herokuapp.com" target="_blank">
-                                <img class="projets-img " src="assets/img/react-projects.png" alt="imge du site Sy20 react projects">
+                                <img class="projets-img " src="assets/img/react-projects.PNG" alt="imge du site Syl20 react projects">
                             </a>
                             <div class="center">
                                 <a href="https://syl20-projects.herokuapp.com" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
