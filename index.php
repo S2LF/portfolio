@@ -359,7 +359,7 @@ if(isset($_POST['post'])){
                                 <p>
                                 OCI, est <strong>un prestataire de services informatiques et digitaux</strong>, proposant aux entreprises une offre 360 dans l’accompagnement à la transformation numérique. Le service web que j’ai intégré est composé d’une équipe de 8 développeurs.&lrm;
                                 <br>Développant principalement des portails web, les développements se font en PHP et l’équipe a fait le choix de travailler avec le framework Laravel.&lrm;<br><br>
-                                Durant mon année d'alternance à OCI, j'ai pu approfondir mes connaissance en développemeb web PHP notamment avec le framework Laravel, mais j'ai aussi eu l'occasion de mener des projet, de faire leur suivi ainsi que la relation avec le client.&lrm;</p>
+                                Durant mon année d'alternance à OCI, j'ai pu approfondir mes connaissances en développement web PHP notamment avec le framework Laravel, j'ai aussi eu l'occasion de mener des projets, de faire leur suivi ainsi que d'assurer la relation avec le client.&lrm;</p>
                             </div>
                         </div>
                     </div>
@@ -371,9 +371,9 @@ if(isset($_POST['post'])){
                             <div>
                                 <a href="https://www.wildcodeschool.com/fr-FR" target="blank"><img class="img-float-left" src="./assets/img/logo-wild.png" alt="logo Wild Code School"></a>
                                 <p>La Wild Code School est <strong>une école innovante</strong>  et un réseau européen de campus qui forment aux métiers tech des spécialistes adaptables.
-                                C'est dans le centre de formation que j'ai effectué ma formation en alternance avec OCI.&lrm;<br><br>
-                                Durant cette formation j'ai pu approfondir mes connaissances en développement web avec la découverte de nouveaux langages (NodeJs & React). Mais le contenu de la formation 
-                                a permis d'aborder d'autres sujet comme le développement mobile en React Native & Flutter mais aussi des notions de DevOps avec la CI/CD et l'utilisation de Docker par exemple.&lrm;</p>
+                                C'est en alternance avec OCI que c'est déroulé cette formation à distance.&lrm;<br><br>
+                                Durant cette formation j'ai pu approfondir mes connaissances en développement web avec la découverte de nouveaux langages (NodeJs & React). Le contenu de la formation 
+                                a aussi permis d'aborder d'autres sujets comme le développement mobile en React Native & Flutter mais aussi des notions de DevOps avec la CI/CD et l'utilisation de Docker par exemple.&lrm;</p>
                             </div>
                         </div>
                     </div>
