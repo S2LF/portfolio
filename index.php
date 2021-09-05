@@ -57,7 +57,20 @@
 <!-- Captcha v3 -->
 <script src="https://www.google.com/recaptcha/api.js?render=6Lds9qUZAAAAAHsrVexr99a8fy8CvABDBboJDPOI"></script>
 
+<?php
+    function age($date) { 
 
+        //On déclare les dates à comparer
+        $dateNais = new DateTime($date);
+        $dateJour = new DateTime();
+
+        //On calcule la différence
+        $difference = $dateNais->diff($dateJour);
+
+        //On retourne la différence en années
+        return $difference->format('%Y'); 
+   } 
+?>
 
 
 
@@ -102,7 +115,7 @@
                 </figure>
                 <h2 class="not-blue">Moi c’est Sylvain,</h2>
                 <h3 class="center not-blue">
-                    J’ai 29 ans et j'habite à <strong>Strasbourg</strong>.<br><br>
+                    J’ai <?php echo age('1990-09-18')?> ans et j'habite à <strong>Strasbourg</strong>.<br><br>
                     <strong>Je suis Développeur Web !</strong>
                 </h3>
 
@@ -115,15 +128,19 @@
 
 
 
-                <p class="center"> Tout à commencé en Janvier 2019.</p>
+                <p class="center">Mon aventure dans le développement à commencé en Janvier 2019.</p>
                 <p class="center">
                     Souhaitant effectuer une réorientation professionnelle, j’ai entrepris de me former au développement web et à ses différents langages.<br>
                     Après une période d'autoformation sur OpenClassrooms, où j'ai appris la base du développement front-end et back-end, j'ai suivi une formation au <strong>Titre Professionnel de Développeur web & web mobile de Niveau III</strong> à ELAN Formation.</p>
                     <h4 class="center">J'ai obtenu mon diplôme en Juin 2020.</h4>
-                
-
+                <p class="center">
+                    J'ai ensuite décidé de continuer à me former.<br>
+                    Pour cela, j'ai intégré une nouvelle formation, cette fois pour le <strong>Titre Professionnel de Concepteur Développeur d'application</strong> à la Wild Code School. Cette formation s'est faite en alternance avec
+                    l'entreprise OCI qui m'a accueillis en Septembre 2020.
+                    <h4 class="center">Le passage du titre se fera en Novembre 2021</h4>
+                </p>
                 <h3 class="center not-blue">
-                    <strong>Je suis actuellement à la recherche d’un emploi.</strong>
+                    <strong>Je suis actuellement à la recherche d’un emploi pour Novembre 2021.</strong>
                 </h3>
             </article>
 
@@ -139,14 +156,14 @@
                         </a>
                             <div class="center">
                                 <a href="#" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
-                                <a href="https://github.com/S2LF/TofBoxProject" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                                <a href="https://github.com/S2LF/portfolio" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                             </div>
                         </div>
                         <div class="flex ">
                             <div>
                                 <p>Mon portfolio est le site sur lequel vous êtes actuellement:
                                     <ul>
-                                        <li>Version 5, design et contenu évoluant régulièrement</li>
+                                        <li>Version 6, design et contenu évoluant régulièrement</li>
                                         <li>Projet réalisé afin de présenter mon expériences, mes compétences</li>
                                         <li>Entièrement réalisé par mes soins, sans librairies ou framework.</li>
                                         <li>Site web responsive</li>
@@ -158,10 +175,62 @@
                                 <img class="logoResize" src="assets/img/Tech.png" alt="logo langages">
                             </div>
                         </div>
-
                 </article>
                 <hr class="style-two" id="form">
-
+                <div class="projets-flex">
+                    <article>
+                        <h3 class="center not-blue">Application mobile "Il était un film"</h3>
+                        <div class="center">
+                            <a href="https://play.google.com/store/apps/details?id=s2lf.cinema" target="_blank">
+                                <img class="projets-img" src="assets/img/app-mobile.jpg" alt="image de l'application mobile">
+                            </a>
+                            <div class="center">
+                                <a href="https://play.google.com/store/apps/details?id=s2lf.cinema" target="_blank">
+                                    <i class="fas fa-eye fa-3x"></i>
+                                </a>&nbsp;&nbsp;
+                                <a href="https://github.com/S2LF/rn-cinema" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                            </div>
+                        </div>
+                        
+                        <p>Application mobile de recherche de film, séries ou personnes liées au cinéma :
+                            <ul>
+                                <li>Réalisé en React Native avec Expo.</li>
+                                <li>Utilisation de l'API TheMovieDatabase pour les données.</li>
+                                <li>Mise en production sur le Google Play Store.</li>
+                            </ul>
+                        </p>
+                        <div  class="projets-logo">
+                            <img class="logoResize" src="assets/img/stack-mobile.png" alt="logo react native"><br>
+<!--                             
+                            <img class="logoResize"  src="assets/img/expo.jpg" alt="logo langages back"><br> -->
+                            <!-- <img class="logoSize" src="assets/img/logo-wordpress.png" alt="logo WordPress"> -->
+                        </div>
+                    </article>
+                    <article>
+                        <h3 class="center not-blue">Memory & jeu du Pendu</h3>
+                        <div class="center">
+                            <a href="https://syl20-projects.herokuapp.com" target="_blank">
+                                <img class="projets-img " src="assets/img/react-projects.png" alt="imge du site Sy20 react projects">
+                            </a>
+                            <div class="center">
+                                <a href="https://syl20-projects.herokuapp.com" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
+                                <a href="https://github.com/S2LF/reacts-projects" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                            </div>
+                        </div>
+                        <p>Site web hébergé sur Heroku qui présente des projet réalisé en React & NodeJs :
+                            <ul>
+                                <li>Utilisation de React Router</li>
+                                <li>Création et mise en place d'un API en NodeJs avec Express pour l'affichage & la sauvegarde des scores avec une base de donnée MongoDB</li>
+                                <li>Site web responsive</li>
+                            </ul>
+                        </p>
+                        <div class="projets-logo">
+                            <img class="" src="assets/img/mern.png" alt="logo stack mern"><br>
+                            
+                        </div>
+                    </article>
+                </div>
+                <hr class="style-two" id="form">
                 <div class="projets-flex">
                     <article>
                         <h3 class="center not-blue">Tof'Box</h3>
@@ -171,7 +240,7 @@
                             </a>
                             <div class="center">
                                 <a href="https://tofbox.sylvainallain.fr/" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
-                                <a href="https://github.com/S2LF/portfolio" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                                <a href="https://github.com/S2LF/TofBoxProject" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                             </div>
                         </div>
                         <p>Réseau social de partage de photographies:
@@ -218,46 +287,72 @@
             <section class="border-bot" id="parcours">
                 <h2 class="center">Mon parcours</h2>
                 <div class="timeline-container">
-
-                <div class="timeline-block timeline-block-right">
-                    <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Autoformation en développement web</h3>
-                        <span><a href="https://openclassrooms.com/fr/" class="link" target="blank">OpenClassrooms</a> | Janvier 2019 à Aujourd'hui</span>
-                        <div>
-                        <a href="https://openclassrooms.com/fr/" target="blank"><img class="img-float-left" src="./assets/img/LogoOC.png" alt="logo OpenClassrooms"></a>
-                            <p>Plateforme de formation en ligne connue et reconnus, ma  <strong>réorientation endéveloppement web</strong> a commencé avec OpenClassrooms.<br><br>
-                            Aujourd'hui titulaire de 10 certificats en développement web, je compte bien continuer à me former sur cette plateforme en ligne et sur d'autres...</p>
+                    <div class="timeline-block timeline-block-left">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>Développeur web en alternance</h3>
+                            <span><a href="https://www.oci.fr/" class="link" target="blank">OCI</a> | Septembre 2020 - Octobre 2021 </span>
+                            <div>
+                                <a href="https://www.oci.fr/" target="blank"><img class="img-float-right" src="./assets/img/logo-oci.png" alt="logo OCI"></a>
+                                <p>
+                                OCI, est <strong>un prestataire de services informatiques et digitaux</strong>, proposant aux entreprises une offre 360 dans l’accompagnement à la transformation numérique. Le service web que j’ai intégré est composé d’une équipe de 8 développeurs.&lrm;
+                                <br>Développant principalement des portails web, les développements se font en PHP et l’équipe a fait le choix de travailler avec le framework Laravel.&lrm;<br><br>
+                                Durant mon année d'alternance à OCI, j'ai pu approfondir mes connaissance en développemeb web PHP notamment avec le framework Laravel, mais j'ai aussi eu l'occasion de mener des projet, de faire leur suivi ainsi que la relation avec le client.&lrm;</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="timeline-block timeline-block-left">
-                    <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Titre professionnel Développeur web & web mobile</h3>
-                        <span><a href="https://elan-formation.eu/" class="link" target="blank">ELAN Formation</a> | Obtenu en Juin 2020</span>
-                        <div>
-                            <a href="https://elan-formation.eu/" target="blank"><img class="img-float-right" src="./assets/img/logo-elan.png" alt="logo Elan formation"></a>
-                            <p><strong>Centre de formation</strong> installé en Alsace depuis plus de 25 ans, c'est dans le centre de Strasbourg que j'ai effectué ma formation au <strong>Titre professionnel de Développeur web et web mobile</strong>.&lrm;<br><br>
-                            Formé aux langages front et back-end par des formateurs compétents et passionnés, ils m'ont transmis les bonnes pratiques du développement web et m'ont accompagné durant mes apprentissages du développement, en formation.&lrm;</p>
+                    <div class="timeline-block timeline-block-right">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>Titre professionnel Concepteur développeur d'application web</h3>
+                            <span><a href="https://www.wildcodeschool.com/fr-FR" class="link" target="blank">Wild Code School</a> | Obtenu en Novembre 2021</span>
+                            <div>
+                                <a href="https://www.wildcodeschool.com/fr-FR" target="blank"><img class="img-float-left" src="./assets/img/logo-wild.png" alt="logo Wild Code School"></a>
+                                <p>La Wild Code School est <strong>une école innovante</strong>  et un réseau européen de campus qui forment aux métiers tech des spécialistes adaptables.
+                                C'est dans le centre de formation que j'ai effectué ma formation en alternance avec OCI.&lrm;<br><br>
+                                Durant cette formation j'ai pu approfondir mes connaissances en développement web avec la découverte de nouveaux langages (NodeJs & React). Mais le contenu de la formation 
+                                a permis d'aborder d'autres sujet comme le développement mobile en React Native & Flutter mais aussi des notions de DevOps avec la CI/CD et l'utilisation de Docker par exemple.&lrm;</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="timeline-block timeline-block-right">
-                    <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Stage développeur web Magento 2</h3>
-                        <span><a href="https://black.bird.eu/fr/" class="link" target="blank">Blackbird Agency</a> | Mars - Mai 2020</span>
-                        <div>
-                            <a href="https://black.bird.eu/fr/" class="link"><img class="img-float-left" src="./assets/img/logo-blackbird.png" alt="logo Blackbird agency"></a>
-                            <p><strong>Agence de développement web</strong> spécialisé dans les projets e-commerce sur la solution CMS Magento.<br><br>
-                            Ce stage m'a permis de découvrir le CMS <strong>Magento 2</strong> et de réaliser mon projet de stage:<br>
-                            Le développement d'un module permettant l’import de fichiers CSV, le traitement et le stockage en base de données de ses informations et enfin l’affichage et la possibilité d’agir sur ces données dans l’espace administrateur de Magento 2. <br><br>
-                            Ce stage a été très formateur, autant sur l’utilisation de PHP en tant que langage orienté objet et le design pattern MVP, que sur l’utilisation et la structure de Magento 2 dans un environnement Linux.</p>
+                    <!-- <div class="timeline-block timeline-block-right">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>Autoformation en développement web</h3>
+                            <span><a href="https://openclassrooms.com/fr/" class="link" target="blank">OpenClassrooms</a> | Janvier 2019 à Aujourd'hui</span>
+                            <div>
+                            <a href="https://openclassrooms.com/fr/" target="blank"><img class="img-float-left" src="./assets/img/LogoOC.png" alt="logo OpenClassrooms"></a>
+                                <p>Plateforme de formation en ligne connue et reconnus, ma  <strong>réorientation endéveloppement web</strong> a commencé avec OpenClassrooms.<br><br>
+                                Aujourd'hui titulaire de 10 certificats en développement web, je compte bien continuer à me former sur cette plateforme en ligne et sur d'autres...</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="timeline-block timeline-block-left">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>Titre professionnel Développeur web & web mobile</h3>
+                            <span><a href="https://elan-formation.eu/" class="link" target="blank">ELAN Formation</a> | Obtenu en Juin 2020</span>
+                            <div>
+                                <a href="https://elan-formation.eu/" target="blank"><img class="img-float-right" src="./assets/img/logo-elan.png" alt="logo Elan formation"></a>
+                                <p><strong>Centre de formation</strong> installé en Alsace depuis plus de 25 ans, c'est dans le centre de Strasbourg que j'ai effectué ma formation au <strong>Titre professionnel de Développeur web et web mobile</strong>.&lrm;<br><br>
+                                Formé aux langages front et back-end par des formateurs compétents et passionnés, ils m'ont transmis les bonnes pratiques du développement web et m'ont accompagné durant mes apprentissages du développement, en formation.&lrm;</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="timeline-block timeline-block-right">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>Stage développeur web Magento 2</h3>
+                            <span><a href="https://black.bird.eu/fr/" class="link" target="blank">Blackbird Agency</a> | Mars - Mai 2020</span>
+                            <div>
+                                <a href="https://black.bird.eu/fr/" class="link"><img class="img-float-left" src="./assets/img/logo-blackbird.png" alt="logo Blackbird agency"></a>
+                                <p><strong>Agence de développement web</strong> spécialisé dans les projets e-commerce sur la solution CMS Magento.<br><br>
+                                Ce stage m'a permis de découvrir le CMS <strong>Magento 2</strong> et de réaliser mon projet de stage:<br>
+                                Le développement d'un module permettant l’import de fichiers CSV, le traitement et le stockage en base de données de ses informations et enfin l’affichage et la possibilité d’agir sur ces données dans l’espace administrateur de Magento 2. <br><br>
+                                Ce stage a été très formateur, autant sur l’utilisation de PHP en tant que langage orienté objet et le design pattern MVP, que sur l’utilisation et la structure de Magento 2 dans un environnement Linux.</p>
+                            </div>
+                        </div>
+                    </div>
 
                 <div class="timeline-block timeline-block-left">
                     <div class="marker"></div>
@@ -297,7 +392,7 @@
         <section id="contact" class="anchor">
             <h2 >Réseaux & Contacts</h2>
             <div class="center">
-                <div><a class="socials" href="./assets/docs/CVSylvainALLAIN.pdf" target="blank"><img src="./assets/img/file-pdf-solid.svg" alt="logo PDF"><p>&nbsp; Mon CV</p></a></div>
+                <div><a class="socials" href="./assets/docs/CV-SylvainALLAIN.pdf" target="blank"><img src="./assets/img/file-pdf-solid.svg" alt="logo PDF"><p>&nbsp; Mon CV</p></a></div>
                 <div><a class="socials" href="https://www.linkedin.com/in/sylvain-allain/" target="blank"><img src="./assets/img/linkedin-brands.svg" alt="logo LinkedIn"><p>&nbsp;LinkedIn</p></a></div>
                 <div><a class="socials" href="https://github.com/S2LF" target="blank"><img src="./assets/img/github-square-brands.svg" alt="Logo GitHub"><p>&nbsp;GitHub</p></a></div>
             </div>
@@ -305,7 +400,7 @@
        <hr class="style-two" id="form">
         <section class="form">
             <h3 class="center">Formulaire de contact</h3>
-            <p class="center">N’hésitez pas à remplir ce formulaire si vous souhaiter me laisser un message que ce soit pour me proposer un stage ou me faire des retours sur la construction de mon site !</p>
+            <p class="center">N’hésitez pas à remplir ce formulaire si vous souhaiter me laisser un message !</p>
             <p class="center"><span>Je vous recontacterai dès que possible.</span></p>
 
 
@@ -362,8 +457,8 @@
     <footer>
             <img src="./assets/img/LogoASPixel4.png" alt="Mon logo">
             <p>Merci de votre visite</p>
-            <p>Mon Portfolio - Version 5.1.0</p>
-            <p>Made with <i class="fa fa-heart "></i> by Syl20 - Tous droits réservés - 2020</p>
+            <p>Mon Portfolio - Version 6</p>
+            <p>Made with <i class="fa fa-heart "></i> by Syl20 - Tous droits réservés - <?php echo date('Y') ?></p>
             <p><a href="./mentions.html">Mentions légales</a></p>
 
     </footer>
