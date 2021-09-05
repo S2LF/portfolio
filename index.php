@@ -184,7 +184,7 @@ if(isset($_POST['post'])){
                     <strong>Je suis Développeur Web !</strong>
                 </h3>
 
-               <p class="center"><a class="cv" href="./assets/docs/CVSylvainALLAIN.pdf" target="blank">TELECHARGEZ MON CV</a></p>
+               <p class="center"><a class="cv" href="./assets/docs/CV-SylvainALLAIN.pdf" target="blank">TELECHARGEZ MON CV</a></p>
 
             </article>
             <hr class="style-two">
@@ -226,8 +226,8 @@ if(isset($_POST['post'])){
                                 <p>Mon portfolio est le site sur lequel vous êtes actuellement :
                                     <ul>
                                         <li>Version 6, design et contenu évoluant régulièrement</li>
-                                        <li>Projet réalisé afin de présenter mon expériences, mes compétences</li>
-                                        <li>Entièrement réalisé par mes soins, sans librairies ou framework.</li>
+                                        <li>Projet réalisé afin de présenter mon expérience, mes compétences</li>
+                                        <li>Entièrement réalisé par mes soins, sans librairie ou framework.</li>
                                         <li>Site web responsive</li>
                                     </ul>
                                 </p>
@@ -238,7 +238,7 @@ if(isset($_POST['post'])){
                             </div>
                         </div>
                 </article>
-                <hr class="style-two" id="form">
+                <hr class="style-two">
                 <div class="projets-flex">
                     <article>
                         <h3 class="center not-blue">Application mobile "Il était un film"</h3>
@@ -292,7 +292,7 @@ if(isset($_POST['post'])){
                         </div>
                     </article>
                 </div>
-                <hr class="style-two" id="form">
+                <hr class="style-two">
                 <div class="projets-flex">
                     <article>
                         <h3 class="center not-blue">Tof'Box</h3>
@@ -384,7 +384,7 @@ if(isset($_POST['post'])){
                             <span><a href="https://openclassrooms.com/fr/" class="link" target="blank">OpenClassrooms</a> | Janvier 2019 à Aujourd'hui</span>
                             <div>
                             <a href="https://openclassrooms.com/fr/" target="blank"><img class="img-float-left" src="./assets/img/LogoOC.png" alt="logo OpenClassrooms"></a>
-                                <p>Plateforme de formation en ligne connue et reconnus, ma  <strong>réorientation endéveloppement web</strong> a commencé avec OpenClassrooms.<br><br>
+                                <p>Plateforme de formation en ligne connue et reconnues, ma  <strong>réorientation en développement web</strong> a commencé avec OpenClassrooms.<br><br>
                                 Aujourd'hui titulaire de 10 certificats en développement web, je compte bien continuer à me former sur cette plateforme en ligne et sur d'autres...</p>
                             </div>
                         </div>
@@ -408,7 +408,7 @@ if(isset($_POST['post'])){
                             <span><a href="https://black.bird.eu/fr/" class="link" target="blank">Blackbird Agency</a> | Mars - Mai 2020</span>
                             <div>
                                 <a href="https://black.bird.eu/fr/" class="link"><img class="img-float-left" src="./assets/img/logo-blackbird.png" alt="logo Blackbird agency"></a>
-                                <p><strong>Agence de développement web</strong> spécialisé dans les projets e-commerce sur la solution CMS Magento.<br><br>
+                                <p><strong>Agence de développement web</strong> spécialisée dans les projets e-commerce sur la solution CMS Magento.<br><br>
                                 Ce stage m'a permis de découvrir le CMS <strong>Magento 2</strong> et de réaliser mon projet de stage:<br>
                                 Le développement d'un module permettant l’import de fichiers CSV, le traitement et le stockage en base de données de ses informations et enfin l’affichage et la possibilité d’agir sur ces données dans l’espace administrateur de Magento 2. <br><br>
                                 Ce stage a été très formateur, autant sur l’utilisation de PHP en tant que langage orienté objet et le design pattern MVP, que sur l’utilisation et la structure de Magento 2 dans un environnement Linux.</p>
