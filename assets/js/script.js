@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
             $('nav').css('margin-right', '10px')
         }
         else {
-            $('nav').css('margin-right', '-190px')
+            $('nav').css('margin-right', '-310px')
         }
    })
 

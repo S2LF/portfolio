@@ -66,8 +66,11 @@
         top:0.5em;
     }
     header>div>section>h1{
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin: 1em auto;
+    }
+    .sticky>div>section>h1{
+        font-size: 1.2em;
     }
     #wrapper {
         margin-top:5em;
@@ -110,11 +113,11 @@
         top: 110px;
         right: 1em;
         background-color: var(--main-color);
-        width: 162px;
+        width: 193px;
         max-height: 9rem;
-        font-size: 0.5em;
+        font-size: 0.6em;
         border-radius:1em;
-        margin-right: -190px;
+        margin-right: -310px;
         box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
     }
     .sticky nav a{
@@ -151,7 +154,7 @@
         display:none;
     }
     header{
-        height: 100px;
+        height: 90px;
     }
     #burgerNav{
     border: 2px solid var(--main-color-lighter);
@@ -162,9 +165,15 @@
     display: initial;
     position: absolute;
     right: 0.5em;
-    top: 1.6em;
+    top: 1.3em;
     }
 
+    .logoResize{
+        height: 70px;
+    }
+    .logoSize{
+        height: 80px;
+    }
 
     /* img */
     figure{
@@ -189,13 +198,16 @@
     .ancre{
         bottom: 1em;
     }
+    .ancre i {
+        font-size: 3em;
+    }
     .ancre a{
         display: flex;
         justify-content: center;
         position: static;
     }
     footer{
-        padding-bottom: 3em;
+        padding-bottom: 4em;
     }
     /* Formulaire */
     .form p input {

@@ -1,3 +1,68 @@
+<?php
+
+
+sleep(1);
+$nom=htmlspecialchars($_POST['nom'], ENT_QUOTES,'UTF-8');
+$mail=htmlspecialchars($_POST['mail'], ENT_QUOTES,'UTF-8');
+$sujet=htmlspecialchars($_POST['sujet'], ENT_QUOTES,'UTF-8');
+$message=htmlspecialchars($_POST['message'], ENT_QUOTES,'UTF-8');
+
+$headers = "From: noreply@sylvainallain.fr"."\n"; // Adresse fictive expediteur
+$headers .= "Content-Type: text/html; charset=UTF-8"."\n";
+$headers .='Content-Transfer-Encoding: 8bit';
+
+
+$destinataire="contact@sylvainallain.fr"; // Mon adresse mail
+
+$monMessage="
+Vous avez reçu un message du formulaire sur sylvainallain.fr.<br>
+Le voici:<br>
+De: $nom <br>
+Sujet: $sujet <br>
+Email: $mail <br>
+Message: $message<br>";
+
+$clientMessage="
+Bonjour,<br>
+
+Vous recevez ce mail automatique suite à l'envoie d'un formulaire de contact sur sylvainallain.fr.<br>
+Voici votre message: <br>
+$message<br>
+<br>
+Nous vous répondrons dans les meilleurs délais.
+";
+$clientSujet="Votre message: $sujet";
+
+if(isset($_POST['post'])){
+    // print_r($_POST);
+    $url = "https://www.google.com/recaptcha/api/siteverify";
+    $data = [
+        'secret' => '6Lds9qUZAAAAAO65ND46zWRDM6z0b0cVSIN2rIfr',
+        'response' => $_POST['token']
+    ];
+    
+    $options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        ]
+    ];
+
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+
+    $result = json_decode($response, true);
+    
+    if($result['success'] == true){
+        mail($destinataire,$sujet,$monMessage,$headers) && mail($mail, $clientSujet, $clientMessage, $headers);
+        header("Location:index.php?success#form");
+    } else {
+        header("Location:index.php?error#form");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,20 +76,20 @@
 
     <!-- Primary Meta Tags -->
     <title>Sylvain ALLAIN - Développeur web</title>
-    <meta name="title" content="Sylvain ALLAIN - Site de présentation">
+    <meta name="title" content="Sylvain ALLAIN - Développeur web">
     <meta name="description" content="Site de présentation d'un dévelopeur web & web mobile">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.sylvainallain.fr/">
-    <meta property="og:title" content="Sylvain ALLAIN - Site de présentation">
+    <meta property="og:title" content="Sylvain ALLAIN - Développeur web">
     <meta property="og:description" content="Site de présentation d'un dévelopeur web & web mobile">
     <meta property="og:image" content="assets/img/MonSite.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.sylvainallain.fr/">
-    <meta property="twitter:title" content="Sylvain ALLAIN - Site de présentation">
+    <meta property="twitter:title" content="Sylvain ALLAIN - Développeur web">
     <meta property="twitter:description" content="Site de présentation d'un dévelopeur web & web mobile">
     <meta property="twitter:image" content="assets/img/MonSite.png">
 
@@ -109,13 +174,13 @@
                <p class="center"><a class="cv" href="./assets/docs/CVSylvainALLAIN.pdf" target="blank">TELECHARGEZ MON CV</a></p>
 
             </article>
-            <hr class="style-two" id="form">
+            <hr class="style-two">
             <article id="propos" class="border-bot anchor">
                 <h2>&Agrave; propos de moi</h2>
 
 
 
-                <p class="center"> Tout à commencé en Janvier 2019.</p>
+                <p class="center"> Tout a commencé en Janvier 2019.</p>
                 <p class="center">
                     Souhaitant effectuer une réorientation professionnelle, j’ai entrepris de me former au développement web et à ses différents langages.<br>
                     Après une période d'autoformation sur OpenClassrooms, où j'ai appris la base du développement front-end et back-end, j'ai suivi une formation au <strong>Titre Professionnel de Développeur web & web mobile de Niveau III</strong> à ELAN Formation.</p>
@@ -144,11 +209,11 @@
                         </div>
                         <div class="flex ">
                             <div>
-                                <p>Mon portfolio est le site sur lequel vous êtes actuellement:
+                                <p>Mon portfolio est le site sur lequel vous êtes actuellement :
                                     <ul>
                                         <li>Version 5, design et contenu évoluant régulièrement</li>
-                                        <li>Projet réalisé afin de présenter mon expériences, mes compétences</li>
-                                        <li>Entièrement réalisé par mes soins, sans librairies ou framework.</li>
+                                        <li>Projet réalisé afin de présenter mon expérience, mes compétences</li>
+                                        <li>Entièrement réalisé par mes soins, sans librairie ou framework.</li>
                                         <li>Site web responsive</li>
                                     </ul>
                                 </p>
@@ -160,7 +225,7 @@
                         </div>
 
                 </article>
-                <hr class="style-two" id="form">
+                <hr class="style-two">
 
                 <div class="projets-flex">
                     <article>
@@ -174,7 +239,7 @@
                                 <a href="https://github.com/S2LF/portfolio" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                             </div>
                         </div>
-                        <p>Réseau social de partage de photographies:
+                        <p>Réseau social de partage de photographies :
                             <ul>
                                 <li>Projet de fin de formation en développement web.</li>
                                 <li>Réalisé avec le framework PHP Symfony 5</li>
@@ -200,7 +265,7 @@
                             </div>
                         </div>
                         
-                        <p>Site web de photographes réalisé avec WordPress:
+                        <p>Site web de photographe réalisé avec WordPress :
                             <ul>
                                 <li>Création d'un thème personnalisé pour gérer le front.</li>
                                 <li>Utilisation du plugin ACF Pro permettant la modification du contenu depuis l'interface administrateur.</li>
@@ -226,7 +291,7 @@
                         <span><a href="https://openclassrooms.com/fr/" class="link" target="blank">OpenClassrooms</a> | Janvier 2019 à Aujourd'hui</span>
                         <div>
                         <a href="https://openclassrooms.com/fr/" target="blank"><img class="img-float-left" src="./assets/img/LogoOC.png" alt="logo OpenClassrooms"></a>
-                            <p>Plateforme de formation en ligne connue et reconnus, ma  <strong>réorientation endéveloppement web</strong> a commencé avec OpenClassrooms.<br><br>
+                            <p>Plateforme de formation en ligne connue et reconnues, ma  <strong>réorientation en développement web</strong> a commencé avec OpenClassrooms.<br><br>
                             Aujourd'hui titulaire de 10 certificats en développement web, je compte bien continuer à me former sur cette plateforme en ligne et sur d'autres...</p>
                         </div>
                     </div>
@@ -251,7 +316,7 @@
                         <span><a href="https://black.bird.eu/fr/" class="link" target="blank">Blackbird Agency</a> | Mars - Mai 2020</span>
                         <div>
                             <a href="https://black.bird.eu/fr/" class="link"><img class="img-float-left" src="./assets/img/logo-blackbird.png" alt="logo Blackbird agency"></a>
-                            <p><strong>Agence de développement web</strong> spécialisé dans les projets e-commerce sur la solution CMS Magento.<br><br>
+                            <p><strong>Agence de développement web</strong> spécialisée dans les projets e-commerce sur la solution CMS Magento.<br><br>
                             Ce stage m'a permis de découvrir le CMS <strong>Magento 2</strong> et de réaliser mon projet de stage:<br>
                             Le développement d'un module permettant l’import de fichiers CSV, le traitement et le stockage en base de données de ses informations et enfin l’affichage et la possibilité d’agir sur ces données dans l’espace administrateur de Magento 2. <br><br>
                             Ce stage a été très formateur, autant sur l’utilisation de PHP en tant que langage orienté objet et le design pattern MVP, que sur l’utilisation et la structure de Magento 2 dans un environnement Linux.</p>
@@ -263,13 +328,13 @@
                     <div class="marker"></div>
                     <div class="timeline-content">
                         <h3>Stage développeur web</h3>
-                        <span><a class="link" href="https://www.aw-innovate.com/" target="blank">AW Innovate</a> | Octrobre - Novembre 2019</span>
+                        <span><a class="link" href="https://www.aw-innovate.com/" target="blank">AW Innovate</a> | Octobre - Novembre 2019</span>
                         <div>
                         <a href="https://www.aw-innovate.com/" target="blank"><img class="img-float-right" src="./assets/img/logoAW.jpg" alt="logo AW Innovate"></a>
                         <p><strong>AW Innovate est une agence digitale conseil en innovation</strong>. Elle accompagne les entreprises qui le souhaitent vers la création de leur site web.&lrm;<br><br>
 
-                            Durant 2 semaines, au sein d'une équipe de développeurs, j'ai eu l'occasion démarrer un projet concret et de réaliser la partie front et back d'un site web.&lrm; <br><br>
-                            Cette expérience a été pour moi essentielle, elle m'a permis de mettre en pratique ce que j'ai appris durant les derniers mois, de me rendre compte du chemin parcourus et du chemin qu'il me restait à parcourir.&lrm;
+                            Durant 2 semaines, au sein d'une équipe de développeurs, j'ai eu l'occasion de démarrer un projet concret et de réaliser la partie front et back d'un site web.&lrm; <br><br>
+                            Cette expérience a été pour moi essentielle, elle m'a permis de mettre en pratique ce que j'ai appris durant les derniers mois, de me rendre compte du chemin parcouru et du chemin qu'il me restait à parcourir.&lrm;
                         </p>
 
                         </div>
@@ -283,9 +348,9 @@
                         <span><a class="link" href="https://tradelab.com/" target="blank">Tradelab</a> | Mars - Avril 2019</span>
                         <div>
                             <a href="https://www.tradelab.com" target="blank"><img class="img-float-left" src="./assets/img/TRADELAB_Logo1.png" alt="Logo Tradelab"></a>
-                            <p><strong>Tradelab est une start-up spécialiste des campagnes display, mobile et vidéo programmatiques.</strong><br><br>
+                            <p><strong>Tradelab est une start-up spécialiste des campagnes display, mobiles et vidéos programmatiques.</strong><br><br>
                                 Durant ces 2 semaines, j’ai rencontré des développeurs Front (JavaScript, TypeScript et Angular), Back (PHP), QA (testeurs), Infra (maintenance serveurs).
-                                Cet expérience en milieu professionnel a confirmé mon projet de réorientation dans le milieu du développement informatique. <br><br>
+                                Cette expérience en milieu professionnel a confirmé mon projet de réorientation dans le milieu du développement informatique. <br><br>
                                 Après quelques mois à apprendre seul, il me semblait important de pouvoir expérimenter ce métier avant de me projeter dans une formation. 
                             </p>
                             </div>
@@ -302,10 +367,10 @@
                 <div><a class="socials" href="https://github.com/S2LF" target="blank"><img src="./assets/img/github-square-brands.svg" alt="Logo GitHub"><p>&nbsp;GitHub</p></a></div>
             </div>
         </section>
-       <hr class="style-two" id="form">
+       <hr class="style-two">
         <section class="form">
             <h3 class="center">Formulaire de contact</h3>
-            <p class="center">N’hésitez pas à remplir ce formulaire si vous souhaiter me laisser un message que ce soit pour me proposer un stage ou me faire des retours sur la construction de mon site !</p>
+            <p class="center">N’hésitez pas à remplir ce formulaire si vous souhaitez me laisser un message que ce soit pour me proposer un stage ou me faire des retours sur la construction de mon site !</p>
             <p class="center"><span>Je vous recontacterai dès que possible.</span></p>
 
 
@@ -317,14 +382,16 @@
                         <input type="email" name="mail" placeholder="E-Mail*" required>
                     </p>
                 </div>
-                <input id="sujet" type="text" name="sujet" placeholder="Sujet" required>
+                <input id="sujet" type="text" name="sujet" placeholder="Sujet*" required>
 
                 <p class="center"><textarea name="message" id="message" placeholder="Votre message*"></textarea></p>
 
-                <p><input type="checkbox" id="coche" required> <label for="coche">En cochant cette case et en soumettant ce formulaire, j’accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande. Aucun autre traitement ne sera effectué avec mes informations.</label> </p>
+                <p id="check"><input type="checkbox" id="coche" required> <label for="coche">En cochant cette case et en soumettant ce formulaire, j’accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande. Aucun autre traitement ne sera effectué avec mes informations.</label> </p>
 
-                <input type="submit" name="post" value="Envoyer" class="button"><br>
+                <input type="submit" name="post" id="post" value="Envoyer" class="button"><br>
                 <i id="loading" class="fas fa-spinner fa-2x fa-spin" style="display: none;"></i>
+
+                <input type="hidden" name="token" id="token">
 
             </form>
 
@@ -337,15 +404,8 @@
             </h4>
             <h4 class="center" style="color:red">
                 <?php
-                if(isset($_GET['failed'])){
+                if(isset($_GET['error'])){
                    echo "Une erreur est survenue dans l'envoie du formulaire ! Veuillez réessayer...";
-                }
-                ?>
-            </h4>
-            <h4 class="center" style="color:red">
-                <?php
-                if(isset($_GET['robot'])){
-                   echo "Erreur, robot detected !";
                 }
                 ?>
             </h4>
@@ -372,14 +432,16 @@
     <script src="./assets/js/script.js"></script>
 
     <script>
-      function onClick(e) {
-        e.preventDefault();
+    $("#check > input, #check > label").on('click', function(e){
         grecaptcha.ready(function() {
-          grecaptcha.execute('6Lds9qUZAAAAAHsrVexr99a8fy8CvABDBboJDPOI', {action: 'submit'}).then(function(token) {
-              console.log(token)
-          });
+            grecaptcha.execute('6Lds9qUZAAAAAHsrVexr99a8fy8CvABDBboJDPOI', {action: 'submit'}).then(function(token) {
+            //   console.log(token)
+                document.getElementById("token").value = token
+            });
         });
-      }
+    })
+
+
   </script>
 
 
