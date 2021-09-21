@@ -84,14 +84,14 @@ if(isset($_POST['post'])){
     <meta property="og:url" content="https://www.sylvainallain.fr/">
     <meta property="og:title" content="Sylvain ALLAIN - Développeur web">
     <meta property="og:description" content="Site de présentation d'un dévelopeur web & web mobile">
-    <meta property="og:image" content="assets/img/MonSite.png">
+    <meta property="og:image" content="./assets/img/MonSite.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.sylvainallain.fr/">
     <meta property="twitter:title" content="Sylvain ALLAIN - Développeur web">
     <meta property="twitter:description" content="Site de présentation d'un dévelopeur web & web mobile">
-    <meta property="twitter:image" content="assets/img/MonSite.png">
+    <meta property="twitter:image" content="./assets/img/MonSite.png">
 
     <link rel="icon" href="./favicon.ico">
 
@@ -105,9 +105,9 @@ if(isset($_POST['post'])){
     <script src="https://kit.fontawesome.com/64cfa211f1.js" crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" href="assets/css/timeline.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="./assets/css/timeline.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146719243-1"></script>
@@ -213,7 +213,7 @@ if(isset($_POST['post'])){
                         <div class="center">
                             <a href="https://sylvainallain.fr/" target="_blank">
                             <figure>
-                                <img class="projets-img monsite" src="assets/img/MonSite.png" alt="image de mon portfolio">
+                                <img class="projets-img monsite" src="./assets/img/MonSite.png" alt="image de mon portfolio">
                             </figure>
                         </a>
                             <div class="center">
@@ -234,7 +234,7 @@ if(isset($_POST['post'])){
                             </div>
 
                             <div class="projets-logo">
-                                <img class="logoResize" src="assets/img/Tech.png" alt="logo langages">
+                                <img class="logoResize" src="./assets/img/Tech.png" alt="logo langages">
                             </div>
                         </div>
                 </article>
@@ -244,7 +244,7 @@ if(isset($_POST['post'])){
                         <h3 class="center not-blue">Application mobile "Il était un film"</h3>
                         <div class="center">
                             <a href="https://play.google.com/store/apps/details?id=s2lf.cinema" target="_blank">
-                                <img class="projets-img" src="assets/img/app-mobile.jpg" alt="image de l'application mobile">
+                                <img class="projets-img" src="./assets/img/app-mobile.jpg" alt="image de l'application mobile">
                             </a>
                             <div class="center">
                                 <a href="https://play.google.com/store/apps/details?id=s2lf.cinema" target="_blank">
@@ -262,7 +262,7 @@ if(isset($_POST['post'])){
                             </ul>
                         </p>
                         <div  class="projets-logo">
-                            <img class="logoResize" src="assets/img/stack-mobile.png" alt="logo react native"><br>
+                            <img class="logoResize" src="./assets/img/stack-mobile.png" alt="logo react native"><br>
 <!--                             
                             <img class="logoResize"  src="assets/img/expo.jpg" alt="logo langages back"><br> -->
                             <!-- <img class="logoSize" src="assets/img/logo-wordpress.png" alt="logo WordPress"> -->
@@ -272,7 +272,7 @@ if(isset($_POST['post'])){
                         <h3 class="center not-blue">Memory & jeu du Pendu</h3>
                         <div class="center">
                             <a href="https://syl20-projects.herokuapp.com" target="_blank">
-                                <img class="projets-img " src="assets/img/react-projects.PNG" alt="imge du site Syl20 react projects">
+                                <img class="projets-img " src="./assets/img/react-projects.PNG" alt="imge du site Syl20 react projects">
                             </a>
                             <div class="center">
                                 <a href="https://syl20-projects.herokuapp.com" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
@@ -287,7 +287,7 @@ if(isset($_POST['post'])){
                             </ul>
                         </p>
                         <div class="projets-logo">
-                            <img class="" src="assets/img/mern.png" alt="logo stack mern"><br>
+                            <img class="" src="./assets/img/mern.png" alt="logo stack mern"><br>
                             
                         </div>
                     </article>
@@ -298,7 +298,7 @@ if(isset($_POST['post'])){
                         <h3 class="center not-blue">Tof'Box</h3>
                         <div class="center">
                             <a href="https://tofbox.sylvainallain.fr/" target="_blank">
-                                <img class="projets-img " src="assets/img/tofbox.png" alt="imge du site tof'box">
+                                <img class="projets-img " src="./assets/img/tofbox.png" alt="imge du site tof'box">
                             </a>
                             <div class="center">
                                 <a href="https://tofbox.sylvainallain.fr/" target="_blank"><i class="fas fa-eye fa-3x"></i></a>&nbsp;&nbsp;
@@ -313,16 +313,16 @@ if(isset($_POST['post'])){
                             </ul>
                         </p>
                         <div class="projets-logo">
-                            <img class="logoResize" src="assets/img/Front.png" alt="logo langages front"><br>
-                            <img class="logoResize" src="assets/img/Back.png" alt="logo langages back"><br>
-                            <img class="logoSize" src="assets/img/Symfony5.png" alt="logo Symfony5">
+                            <img class="logoResize" src="./assets/img/Front.png" alt="logo langages front"><br>
+                            <img class="logoResize" src="./assets/img/Back.png" alt="logo langages back"><br>
+                            <img class="logoSize" src="./assets/img/Symfony5.png" alt="logo Symfony5">
                         </div>
                     </article>
                     <article>
                         <h3 class="center not-blue">Joel ALLAIN Photos</h3>
                         <div class="center">
                             <a href="https://joelallainphotos.fr/" target="_blank">
-                                <img id="jap-position" class="projets-img" src="assets/img/joelallainphotos.png" alt="image du site Joel ALLAIN Photo">
+                                <img id="jap-position" class="projets-img" src="./assets/img/joelallainphotos.png" alt="image du site Joel ALLAIN Photo">
                             </a>
                             <div class="center">
                                 <a href="https://joelallainphotos.fr/" target="_blank">
@@ -338,9 +338,9 @@ if(isset($_POST['post'])){
                             </ul>
                         </p>
                         <div  class="projets-logo">
-                            <img class="logoResize" src="assets/img/Front.png" alt="logo langages front"><br>
-                            <img class="logoResize"  src="assets/img/Back.png" alt="logo langages back"><br>
-                            <img class="logoSize" src="assets/img/logo-wordpress.png" alt="logo WordPress">
+                            <img class="logoResize" src="./assets/img/Front.png" alt="logo langages front"><br>
+                            <img class="logoResize"  src="./assets/img/Back.png" alt="logo langages back"><br>
+                            <img class="logoSize" src="./assets/img/logo-wordpress.png" alt="logo WordPress">
                         </div>
                     </article>
                 </div>
