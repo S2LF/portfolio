@@ -268,7 +268,7 @@ if(isset($_POST['post'])){
                             <!-- <img class="logoSize" src="assets/img/logo-wordpress.png" alt="logo WordPress"> -->
                         </div>
                     </article>
-                    <article>
+                    <article class="transition">
                         <h3 class="center not-blue">Memory & jeu du Pendu</h3>
                         <div class="center">
                             <a href="https://syl20-projects.herokuapp.com" target="_blank">
@@ -318,7 +318,7 @@ if(isset($_POST['post'])){
                             <img class="logoSize" src="../assets/img/Symfony5.png" alt="logo Symfony5">
                         </div>
                     </article>
-                    <article>
+                    <article class="transition">
                         <h3 class="center not-blue">Joel ALLAIN Photos</h3>
                         <div class="center">
                             <a href="https://joelallainphotos.fr/" target="_blank">
