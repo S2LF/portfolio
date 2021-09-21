@@ -134,7 +134,9 @@
     }
 
     .projets-flex article:last-child, .projets-flex article:first-child{
-        border: none;
+        border-left: none;
+        border-right: none;
+
     }
     #propos{
         padding-top: 6em;
@@ -173,6 +175,10 @@
     }
     .logoSize{
         height: 80px;
+    }
+
+    .transition{
+        border-top: 1px solid gray;
     }
 
     /* img */
